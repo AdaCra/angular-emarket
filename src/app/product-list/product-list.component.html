@@ -1,0 +1,24 @@
+<div class="ekart--product--container">
+  <img [src]="product.pImage" alt="IPhone X" />
+  <p>Name: {{ product.name }}</p>
+  <p>Color: {{ product.color }}</p>
+  <p>Usual Price: {{ "$" + product.price }}</p>
+  <p>
+    Discount:
+    {{ "$" + getDiscountedPrice().toFixed(2) }}
+  </p>
+  <p>
+    {{
+      product.inStock > 99
+        ? "In Stock"
+        : product.inStock > 0 && product.inStock < 100
+        ? "Only " + product.inStock + " items remaining!"
+        : "Sold Out!"
+    }}
+  </p>
+  <button (click)="decrementCartValue()">-</button> 
+  <span>{{addToCart}}</span>
+  <button (click)="incrementCartValue()">+</button>
+  <!-- <input (input)="onNameChange($event)" />
+  <p>Name: {{ name }}</p> -->
+</div>
