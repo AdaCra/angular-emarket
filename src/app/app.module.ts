@@ -21,13 +21,10 @@ import { ProductListComponent } from './container/product-list/product-list.comp
     TopHeaderComponent,
     ContainerComponent,
     SearchComponent,
-    ProductListComponent
+    ProductListComponent,
   ],
-  imports: [
-    BrowserModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
