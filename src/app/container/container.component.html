@@ -23,6 +23,6 @@
   <p>Name: {{ name }}</p> 
   <div *ngFor="let item of listOfString">
   <p>Current element of array is: {{item}}</p></div> -->
-  <app-search/>
-  <product-list/>
+  <app-search (searchTextChange)="setSearchText($event)"/>
+  <product-list [searchText]="searchText"/>
 </div>
